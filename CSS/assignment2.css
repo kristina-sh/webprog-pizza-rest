@@ -1,0 +1,72 @@
+* {  
+    font-family: sans-serif;    
+  }
+  body{  
+    background: linear-gradient(to left, #2f54c2 27%, #ff99cc 100%);
+    background: blueviolet;
+    position: relative;        /* for the footer to move with the page size */
+    min-height: 100%;          /* for the footer to be at the bottom */
+    padding-bottom: 3rem;      /* for padding at the bottom in the courses page */
+    margin: 10px ;             /* To fit the body in the page */
+  }
+
+  .logincontainer, .registercontainer {
+    background-color: white;  
+    padding: 50px;  
+    width: 500px;
+    margin: auto;
+    border-radius: 25px;
+      /* box-shadow: 2px 2px 8px #c3182c; */
+    box-shadow: 10px 10px 5px rgb(82, 11, 77);  
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+
+  /* .logincontainer[type=label]{
+    width: 30%;
+    float: left;
+    padding-top: 15px;
+} */
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#header {
+  /* padding: 10px;  */
+  margin: -10px -10px 20px -10px; 
+  margin-bottom: 20px;
+  text-align: center;
+  background: #4CAF50;
+  color: white;
+  font-size: 30px;
+  /* border-radius: 15px; */
+
+}
+.footer {
+  position:fixed;
+  left: 0; 
+  bottom: 0; 
+  width: 100%;    
+  background: #4CAF50;
+  color: white;
+  height: 40px;
+  text-align: center;
+  padding:1px;
+  overflow:hidden;  
+}
