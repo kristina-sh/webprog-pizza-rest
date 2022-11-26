@@ -1,45 +1,53 @@
-* {  
-    font-family: sans-serif;    
-  }
-  body{  
-    background: linear-gradient(to left, #2f54c2 27%, #ff99cc 100%);
-    background: blueviolet;
-    position: relative;        /* for the footer to move with the page size */
-    min-height: 100%;          /* for the footer to be at the bottom */
-    padding-bottom: 3rem;      /* for padding at the bottom in the courses page */
-    margin: 10px ;             /* To fit the body in the page */
-  }
+* {
+  font-family: sans-serif;
+}
 
-  .logincontainer, .registercontainer {
-    background-color: white;  
-    padding: 50px;  
-    width: 500px;
-    margin: auto;
-    border-radius: 25px;
-      /* box-shadow: 2px 2px 8px #c3182c; */
-    box-shadow: 10px 10px 5px rgb(82, 11, 77);  
-  }
+body {
+  background: linear-gradient(to left, #2f54c2 27%, #ff99cc 100%);
+  background: blueviolet;
+  position: relative;
+  /* for the footer to move with the page size */
+  min-height: 100%;
+  /* for the footer to be at the bottom */
+  padding-bottom: 3rem;
+  /* for padding at the bottom in the courses page */
+  margin: 10px;
+  /* To fit the body in the page */
+}
 
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  button:hover {
-    opacity: 0.8;
-  }
+.logincontainer,
+.registercontainer {
+  background-color: white;
+  padding: 50px;
+  width: 500px;
+  margin: auto;
+  border-radius: 25px;
+  /* box-shadow: 2px 2px 8px #c3182c; */
+  box-shadow: 10px 10px 5px rgb(82, 11, 77);
+}
 
-  /* .logincontainer[type=label]{
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* .logincontainer[type=label]{
     width: 30%;
     float: left;
     padding-top: 15px;
 } */
 
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -47,9 +55,10 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+
 #header {
   /* padding: 10px;  */
-  margin: -10px -10px 20px -10px; 
+  margin: -10px -10px 20px -10px;
   margin-bottom: 20px;
   text-align: center;
   background: #4CAF50;
@@ -58,15 +67,152 @@ input[type=text], input[type=password] {
   /* border-radius: 15px; */
 
 }
+
 .footer {
-  position:fixed;
-  left: 0; 
-  bottom: 0; 
-  width: 100%;    
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background: #4CAF50;
   color: white;
   height: 40px;
   text-align: center;
-  padding:1px;
-  overflow:hidden;  
+  padding: 1px;
+  overflow: hidden;
+}
+
+/* Format items boxes on menu page (Kristina Shalaginova)*/
+.item {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 10px 10px 5px rgb(82, 11, 77);
+  margin: 7px;
+  padding: 20px;
+  font-size: 12pt;
+}
+
+/* Format boxes direction on menu page (Kristina Shalaginova)*/
+.menu {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 31vw);
+}
+
+/*Format right text in boxes on menu page (Kristina Shalaginova)*/
+.name,
+.category,
+.descrip,
+.size,
+.price {
+  text-align: center;
+  font-size: 12pt
+}
+
+.name,
+.category,
+.size,
+.price {
+  font-weight: bold;
+}
+
+/*Format images (Kristina Shalaginova)*/
+.item-image {
+  display: block;
+  margin-right: 20%;
+  margin-left: 6%;
+  width: 25px;
+}
+
+/* Format navigation bar* (Kristina Shalaginova)*/
+#menupage {
+  margin-top: -35px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #4CAF50;
+  color: black;
+  font-size: 30px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  margin-left: 400px;
+}
+
+a.link a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  margin-left: 450px;
+
+}
+
+/*Select form and searchbar(Kristina Shalaginova)*/
+.select-form {
+  display: flex;
+  gap: 30px;
+}
+
+#searchbar,
+#category-select {
+  width: 20vw;
+  height: 4vh;
+  border-radius: 5px;
+}
+
+#searchbar {
+  margin-top: 1px;
+}
+
+.head-select {
+  font-weight: bold;
+}
+
+/*Change screen size menu page*/
+@media (max-width: 900px) {
+  .menu {
+    grid-template-columns: repeat(2, 47vw);
+  }
+  .item-image {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .navbar{
+    gap:1px;
+    margin-left: -20px;
+
+  }
+  .navbar, .select-form {
+    flex-direction: column;
+  }
+  .link{
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    grid-template-columns: repeat(1, 95vw);
+  }
+  .item-image {
+    margin-right: 10%;
+    margin-left: 15%;
+  }
+  .link{
+    margin-left: 25px;
+  }
+  .navbar, .select-form {
+    flex-direction: column;
+  }
+  .navbar{
+    gap:1px;
+    margin-left: -40px;
+
+  }
 }
