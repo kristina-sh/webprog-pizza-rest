@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kristina Shalaginova">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/assignment2.css">
+    <title>Menu</title>
+</head>
+<!-- Navigation bar-->
+
+<body>
+    <header class="header" id="menupage">
+        <div class="navbar">
+        <h3>My Pizza shop</h3>
+        <h6><a class="link" href="./index.html">Log-in</a></h6>
+        </div>
+        </header>
+
+        <!-- Filtering and searching area -->
+        <form class="select-form">
+            <div class="head-select"> Filter menu items:</div>
+            <select name="category" id="category-select">
+                <option value="select1" class="option">Pizza</option>
+                <option value="select2" class="option">Pasta</option>
+            </select>
+            <input type="text" id="searchbar" onkeyup="search_item()" name="search" placeholder="Search...">
+        </form>
+        <!--Conttent with menu items -->
+        <div class="menu">
+            <div class="item">
+                <div class="item-image"><img src="./images/hawaiian.jpg" alt="hawaiian"></div>
+                <div class="name">Hawaiian</div>
+                <div class="category">Pizza</div>
+                <div class="descrip">Freshly baked in the oven pizza with pineapple and slices of ham topped with an
+                    extra
+                    layer of cheese.</div>
+                <div class="size">Medium</div>
+                <div class="price">$15.55</div>
+        </div>
+        <div class="item">
+            <div class="item-image"><img src="./images/chicken.jpg" alt="chicken"></div>
+            <div class="name">Chicken</div>
+            <div class="category">Pizza</div>
+            <div class="descrip">Freshly baked in the oven pizza with mozzarella cheese, fresh mushrooms, onions,
+                all
+                white-meat chicken, bacon.</div>
+            <div class="size">Medium</div>
+            <div class="price">$17.55</div>
+
+        </div>
+        <div class="item">
+            <div class="item-image"><img src="./images/veggie.jpg" alt="veggie"></div>
+            <div class="name">Veggie</div>
+            <div class="category">Pizza</div>
+            <div class="descrip">Freshly baked in the oven pizza with roasted red peppers, fresh baby spinach, fresh
+                mushrooms, tomatoes, black olives and feta.</div>
+            <div class="size">Medium</div>
+            <div class="price">$13.55</div>
+        </div>
+        <div class="item">
+            <div class="item-image"><img src="./images/carbonara.jpg" alt="carbonara"></div>
+            <div class="name">Carbonara</div>
+            <div class="category">Pasta</div>
+            <div class="descrip">Homemade pasta with grilled white meat chicken, bacon, onions and mushrooms mixed
+                with
+                penne pasta.</div>
+            <div class="size">Medium</div>
+            <div class="price">$13.55</div>
+        </div>
+        <div class="item">
+            <div class="item-image"><img src="./images/tomato.jpg" alt="tomato"></div>
+            <div class="name">Italian Tomato</div>
+            <div class="category">Pasta</div>
+            <div class="descrip"> Homemade pasta whith fresh tomatoes, fresh baby spinach, green peppers, mushrooms.
+            </div>
+            <div class="size">Medium</div>
+            <div class="price">$10.55</div>
+        </div>
+        <div class="item">
+            <div class="item-image"><img src="./images/prima.jpg" alt="prima"></div>
+            <div class="name">Greammy Chicken</div>
+            <div class="category">Pasta</div>
+            <div class="descrip"> Homemade pasta whith chicken and creammy sauce.</div>
+            <div class="size">Medium</div>
+            <div class="price">$14.55</div>
+        </div>
+
+        </div>
+
+        <!--Footer-->
+        <div id="footer"></div>
+        <div class="footer">
+            <p>© 2022 My Pizza Shop (mypizza.com). All Rights Reserved.</p>
+        </div>
+        <script src="./script.js"></script>
+</body>
