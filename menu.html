@@ -13,31 +13,33 @@
 <body>
     <header class="header" id="menupage">
         <div class="navbar">
-        <h3>My Pizza shop</h3>
-        <h6><a class="link" href="./index.html">Log-in</a></h6>
+            <h3>My Pizza shop</h3>
+            <h6><a class="link" href="./index.html">Log-in</a></h6>
         </div>
-        </header>
+    </header>
 
-        <!-- Filtering and searching area -->
-        <form class="select-form">
-            <div class="head-select"> Filter menu items:</div>
-            <select name="category" id="category-select">
-                <option value="select1" class="option">Pizza</option>
-                <option value="select2" class="option">Pasta</option>
-            </select>
-            <input type="text" id="searchbar" onkeyup="search_item()" name="search" placeholder="Search...">
-        </form>
-        <!--Conttent with menu items -->
-        <div class="menu">
-            <div class="item">
-                <div class="item-image"><img src="./images/hawaiian.jpg" alt="hawaiian"></div>
-                <div class="name">Hawaiian</div>
-                <div class="category">Pizza</div>
-                <div class="descrip">Freshly baked in the oven pizza with pineapple and slices of ham topped with an
-                    extra
-                    layer of cheese.</div>
-                <div class="size">Medium</div>
-                <div class="price">$15.55</div>
+    <!-- Filtering and searching area -->
+    <form class="select-form">
+        <div class="head-select"> Filter menu items:</div>
+        <select name="category" id="category-select" onclick="filter_item()">
+            <option value="select_item" class="option">Select item...</option>
+            <option value="pizza" class="option">Pizza</option>
+            <option value="pasta" class="option">Pasta</option>
+        </select>
+        <input type="text" id="searchbar" onkeyup="search_item()" name="search" placeholder="Search...">
+
+    </form>
+    <!--Conttent with menu items -->
+    <div class="menu">
+        <div class="item">
+            <div class="item-image"><img src="./images/hawaiian.jpg" alt="hawaiian"></div>
+            <div class="name">Hawaiian</div>
+            <div class="category">Pizza</div>
+            <div class="descrip">Freshly baked in the oven pizza with pineapple and slices of ham topped with an
+                extra
+                layer of cheese.</div>
+            <div class="size">Medium</div>
+            <div class="price">$15.55</div>
         </div>
         <div class="item">
             <div class="item-image"><img src="./images/chicken.jpg" alt="chicken"></div>
@@ -87,12 +89,12 @@
             <div class="price">$14.55</div>
         </div>
 
-        </div>
+    </div>
 
-        <!--Footer-->
-        <div id="footer"></div>
-        <div class="footer">
-            <p>© 2022 My Pizza Shop (mypizza.com). All Rights Reserved.</p>
-        </div>
-        <script src="./JS/menu.js"></script>
+    <!--Footer-->
+    <div id="footer"></div>
+    <div class="footer">
+        <p>© 2022 My Pizza Shop (mypizza.com). All Rights Reserved.</p>
+    </div>
+    <script src="./JS/menu.js"></script>
 </body>
