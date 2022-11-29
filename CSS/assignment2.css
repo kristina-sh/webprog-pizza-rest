@@ -89,6 +89,7 @@ input[type=password] {
   margin: 7px;
   padding: 20px;
   font-size: 12pt;
+
 }
 
 /* Format boxes direction on menu page (Kristina Shalaginova)*/
@@ -179,19 +180,24 @@ a.link a:hover {
   .menu {
     grid-template-columns: repeat(2, 47vw);
   }
+
   .item-image {
     margin-right: 10%;
     margin-left: 10%;
   }
-  .navbar{
-    gap:1px;
+
+  .navbar {
+    gap: 1px;
     margin-left: -20px;
 
   }
-  .navbar, .select-form {
+
+  .navbar,
+  .select-form {
     flex-direction: column;
   }
-  .link{
+
+  .link {
     margin-left: 15px;
   }
 }
@@ -200,18 +206,23 @@ a.link a:hover {
   .menu {
     grid-template-columns: repeat(1, 95vw);
   }
+
   .item-image {
     margin-right: 10%;
     margin-left: 15%;
   }
-  .link{
+
+  .link {
     margin-left: 25px;
   }
-  .navbar, .select-form {
+
+  .navbar,
+  .select-form {
     flex-direction: column;
   }
-  .navbar{
-    gap:1px;
+
+  .navbar {
+    gap: 1px;
     margin-left: -40px;
 
   }
