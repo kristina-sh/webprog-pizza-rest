@@ -8,7 +8,15 @@
     <title>Admin Page</title>
 </head>
 <body>
-    <h1>Admin Page</h1> 
-    <!-- video PHP crud app watch (shows how to use XAMPP) on Youtube -->
+    <div>
+        <h1>Admin Home Page</h1>
+        <a class="newUser" href="./createUser.php" role="button">New User</a>   <!--need to create this page-->
+        <table>
+            <th>
+
+            </th>
+            <tr></tr>
+        </table>  
+    </div>
 </body>
 </html>
