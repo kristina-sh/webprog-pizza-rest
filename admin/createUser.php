@@ -1,5 +1,15 @@
 <!--NOTE TO SELF: GOTTA ADD PHP ELEMENTS (AT AROUND 16MIN MARK OF VIDEO)-->
 
+<?php
+$firstName = "";
+$lastName = "";
+$email = "";
+$phone = "";
+$userName = "";
+$role = "";
+$password = "";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
