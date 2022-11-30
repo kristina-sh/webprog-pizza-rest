@@ -56,7 +56,7 @@
                     <td>$row[phone]</td>
                     <td>$row[password]</td>
                     <td>$row[role]</td>
-                    <td>$row[userName]</td>
+                    <td>$row[username]</td>
                     <td>
                         <a class='editUser' href='./admin/editUser.php?id=$row[id]'>Edit</a>
                         <a class='deleteUser' href='./admin/deleteUser.php?id=$row[id]'>Delete</a>
