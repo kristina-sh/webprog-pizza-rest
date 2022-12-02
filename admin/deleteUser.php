@@ -1,3 +1,5 @@
+<!-- File coded by: Melanie Methe -->
+
 <?php
 
 $servername = "localhost";
