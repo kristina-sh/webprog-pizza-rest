@@ -1,10 +1,13 @@
+<!-- TO DO:
+1. Create admin-page specific stylesheet-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Melanie, Kristina, Banu">
+    <meta name="author" content="Melanie Methe">
     <link rel="stylesheet" href="./CSS/assignment2.css">
     <title>User Management Page</title>
 </head>
