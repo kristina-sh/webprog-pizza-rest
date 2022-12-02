@@ -5,7 +5,7 @@ $conn = new mysqli('localhost','root','','assign2');
 if ($conn->connect_error) {
     die('Connection Failed : '.$conn->connect_error);
 }   
-$sql ="select * from user_info " ;
+$sql ="select * from users" ;
 $result =mysqli_query($conn, $sql);
 // $row =mysqli_fetch_array($result,MYSQLI_ASSOC);
 // while ($row = $result->fetch_assoc){
@@ -24,7 +24,7 @@ echo "<table>";
 while ($row = mysqli_fetch_assoc($result)){
 echo "<tr>";    
 echo "<td>";    
-echo $row['user_name'] ;
+echo $row['username'] ;
 echo "</td>";
 echo "<td>";    
 echo $row['phone'] ;
@@ -33,4 +33,6 @@ echo "</tr>";
 // echo "</br>";
 }
 echo "</table>";
+$stmt->close();
+$conn->close();
 ?>
