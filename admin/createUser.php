@@ -1,7 +1,7 @@
 <!--FUNCTIONAL IN TERMS OF CREATING NEW USERS. HOWEVER TO DO LIST:
 1. Need to fix "clear" button. Doesn't work anymore.
 2. Need to fix error messages. Don't look good as buttons.
-3. Need to fix role as well. Doesn't currently make admin on click of Yes radio button. Always sends "on" instead.-->
+-->
 
 <?php
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     $password = $_POST["password"];
-    $role = $_POST["roleButton"];
+    $role = $_POST["role"];
 
     do {
         if (empty($userName) || empty($firstName) || empty($lastName) || empty($email) || empty($password)) {
@@ -115,11 +115,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <input type="password" name="password" value="<?php echo $password; ?>">
             </div>
             <div>
-                <h4>Admin?</h4>
-                <label for="roleButton">Yes</label>
-                <input type="radio" name="roleButton">
-                <label for="roleButton">No</label>
-                <input type="radio" name="roleButton" checked>
+                <label for="role">Role</label>
+                <input type="text" name="role" value="<?php echo $role; ?>">
             </div>
             <?php
                 if ( !empty($successMessage)) {
