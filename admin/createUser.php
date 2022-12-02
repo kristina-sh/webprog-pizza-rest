@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         $successMessage = "User added successfully";
         
-        header("location: ./../userManage.php");
+        header("location: ./userManage.php");
         exit;
 
     } while (false);
@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             <div>
                 <button type="submit">Submit</button>
                 <button type="reset">Clear</button>
-                <a class="cancel" href="./../userManage.php" role="button">Cancel</a>
+                <a class="cancel" href="./userManage.php" role="button">Cancel</a>
             </div>
         </form>
     </div>

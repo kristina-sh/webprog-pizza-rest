@@ -17,5 +17,5 @@ if (!$result) {
     $errorMessage = "Invalid Query: " . $connection -> error;
 }
 
-header("location: ./../userManage.php");
+header("location: ./userManage.php");
 ?>
