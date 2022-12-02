@@ -1,3 +1,7 @@
+/*Course name: Web Programming (CST_8285_312)
+Assignment 2
+Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad */
+
 * {
   font-family: sans-serif;
 }
@@ -97,6 +101,7 @@ input[type=password] {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 31vw);
+  list-style-type: none;
 }
 
 /*Format right text in boxes on menu page (Kristina Shalaginova)*/
@@ -142,8 +147,8 @@ input[type=password] {
   margin-left: 400px;
 }
 
-a.link a:hover {
-  background-color: #ddd;
+h6 a:hover {
+  background-color: rgb(234, 226, 226);
   color: black;
 }
 
@@ -184,6 +189,7 @@ a.link a:hover {
   .item-image {
     margin-right: 10%;
     margin-left: 10%;
+    width:auto;
   }
 
   .navbar {

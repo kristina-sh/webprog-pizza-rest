@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./CSS/assignment2.css">
     <title>Menu</title>
 </head>
-<!-- Navigation bar-->
 
 <body>
+    <!-- Navigation bar-->
     <header class="header" id="menupage">
         <div class="navbar">
             <h3>My Pizza shop</h3>
@@ -35,7 +35,7 @@
             $servername = "localhost";
             $username = "root";
             $password = "";
-            $database = "my_pizza_shop";
+            $database = "webassign2";
 
             //Create connection
             $connection = new mysqli($servername, $username, $password, $database);
@@ -68,12 +68,8 @@
             };
                 ?>
     </div>
-
     <!--Footer-->
-    <div id="footer"></div>
-    <div class="footer">
-        <p>© 2022 My Pizza Shop (mypizza.com). All Rights Reserved.</p>
-    </div>
+    <?php include "footer.php";?>
     <script src="./JS/menu.js"></script>
 </body>
 </html>

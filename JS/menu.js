@@ -2,7 +2,7 @@
 //Assignment 2
 //Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad
 
-//Creating a search function on the menu page
+//Creating a search function on the menu page (Kristina Shalaginova)
 
 
 function search_item() {
@@ -21,7 +21,7 @@ function search_item() {
     }
 }
 
-//Creatin a filter function on the menu page
+//Creatin a filter function on the menu page (Kristina Shalaginova)
 function filter_item() {
     let y = document.getElementsByClassName('item');
     var select = document.getElementById('category-select');
