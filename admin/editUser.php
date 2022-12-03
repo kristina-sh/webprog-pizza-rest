@@ -1,5 +1,5 @@
 <!-- TO DO:
-1. SQL Error SOMEWHERE in code when trying to submit form. "Invalid Query: You have an error in your SQL syntax; check the manual... etc. -->
+1.  SQL Error Gone, but now a Logic Error. Submitting a change doesn't change the value in the database table -->
 <?php
 
 $servername = "localhost";
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
     $id = $_GET["id"];
     // $sql = "SELECT * FROM webassign2.users WHERE id = $id";
-    $result = $connection->query("SELECT * FROM webassign2.users WHERE id = $id");
+    $result = $connection->query("SELECT * FROM webassign2.users WHERE id = $id;");
     $row = $result->fetch_assoc();
 
     if (!$row) {
@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         }
 
         // $sql = "UPDATE webassign2.users SET username = '$userName', firstName = '$firstName', lastName = '$lastName', email = '$email', phone = '$phone', password = '$password', role = '$role' WHERE id = $id";
-        $result = $connection->query("UPDATE webassign2.users SET username = '$userName', firstName = '$firstName', lastName = '$lastName', email = '$email', phone = '$phone', password = '$password', role = '$role' WHERE id = $id");
+        $result = $connection->query("UPDATE webassign2.users SET username = '$userName', firstName = '$firstName', lastName = '$lastName', email = '$email', phone = '$phone', password = '$password', role = '$role' WHERE id = '$id';");
 
         if (!$result) {
             $errorMessage = "Invalid query: " . $connection->error;
