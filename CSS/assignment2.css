@@ -60,17 +60,17 @@ input[type=password] {
   box-sizing: border-box;
 }
 
-#header {
-  /* padding: 10px;  */
-  margin: -10px -10px 20px -10px;
-  margin-bottom: 20px;
+.header {
+  margin-bottom:50px;
   text-align: center;
-  background: #4CAF50;
-  color: white;
-  font-size: 30px;
-  /* border-radius: 15px; */
-
+  background-color: #4CAF50;
+  color: rgb(27, 23, 23);
+  font-size: 15px;
+  height:auto;   
+  overflow: hidden; 
+  margin: -10px -10px 10px -10px; 
 }
+
 
 .footer {
   position: fixed;
