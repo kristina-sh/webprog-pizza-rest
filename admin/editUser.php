@@ -1,9 +1,84 @@
-<!-- WATCH VIDEO TO MAKE THIS PAGE -->
+<!-- TO DO:
+1. SQL Error SOMEWHERE in code when trying to submit form. "Invalid Query: You have an error in your SQL syntax; check the manual... etc. -->
 <?php
 
-$id = $_GET["id"];
+$servername = "localhost";
+$username = "root";
+$databasePasswd = "";
+$database = "webassign2";
 
+//Create connection
+$connection = new mysqli($servername, $username, $databasePasswd, $database);
 
+//initating variables
+$id = "";
+$firstName = "";
+$lastName = "";
+$email = "";
+$phone = "";
+$userName = "";
+$role = "";
+$password = "";
+
+$errorMessage = "";
+$successMessage = "";
+
+//retrieving id value
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+   
+    if ( !isset($_GET["id"])) {
+        header("location: ./userManage.php");
+        exit;
+    }
+    $id = $_GET["id"];
+    // $sql = "SELECT * FROM webassign2.users WHERE id = $id";
+    $result = $connection->query("SELECT * FROM webassign2.users WHERE id = $id");
+    $row = $result->fetch_assoc();
+
+    if (!$row) {
+        header("location: ./userManage.php");
+        exit;
+    }
+
+    $userName = $row["username"];
+    $firstName = $row["firstName"];
+    $lastName = $row["lastName"];
+    $email = $row["email"];
+    $phone = $row["phone"];
+    $password = $row["password"];
+    $role = $row["role"];
+
+} else {
+
+    $userName = $_POST["username"];
+    $firstName = $_POST["firstName"];
+    $lastName = $_POST["lastName"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $password = $_POST["password"];
+    $role = $_POST["role"];
+
+    do {
+        if (empty($userName) || empty($firstName) || empty($lastName) || empty($email) || empty($password)) {
+            $errorMessage = "Username, first and last name, email, and password required";
+            break;
+        }
+
+        // $sql = "UPDATE webassign2.users SET username = '$userName', firstName = '$firstName', lastName = '$lastName', email = '$email', phone = '$phone', password = '$password', role = '$role' WHERE id = $id";
+        $result = $connection->query("UPDATE webassign2.users SET username = '$userName', firstName = '$firstName', lastName = '$lastName', email = '$email', phone = '$phone', password = '$password', role = '$role' WHERE id = $id");
+
+        if (!$result) {
+            $errorMessage = "Invalid query: " . $connection->error;
+            break;
+        }
+
+        $successMessage = "User updated successfully";
+
+        header("location: ./userManage.php");
+        exit;
+
+    } while (false);
+}
 
 
 ?>
@@ -32,9 +107,10 @@ $id = $_GET["id"];
         }
         ?>
         <form action="" method="POST">
+            <input type="hidden" value="<?php echo $id; ?>">
             <div>
-                <label for="userName">Username</label>
-                <input type="text" name="userName" value="<?php echo $userName; ?>">
+                <label for="username">Username</label>
+                <input type="text" name="username" value="<?php echo $userName; ?>">
             </div>
             <div>
                 <label for="firstName">First Name</label>
