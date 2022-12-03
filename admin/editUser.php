@@ -1,5 +1,4 @@
-<!-- TO DO:
-1.  SQL Error Gone, but now a Logic Error. Submitting a change doesn't change the value in the database table -->
+<!-- EditUser page now fully functional! -->
 <?php
 
 $servername = "localhost";
@@ -9,6 +8,10 @@ $database = "webassign2";
 
 //Create connection
 $connection = new mysqli($servername, $username, $databasePasswd, $database);
+
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
+}
 
 //initating variables
 $id = "";
@@ -31,7 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         exit;
     }
     $id = $_GET["id"];
-    // $sql = "SELECT * FROM webassign2.users WHERE id = $id";
     $result = $connection->query("SELECT * FROM webassign2.users WHERE id = $id;");
     $row = $result->fetch_assoc();
 
@@ -50,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 } else {
 
+    $id = $_POST["id"];
     $userName = $_POST["username"];
     $firstName = $_POST["firstName"];
     $lastName = $_POST["lastName"];
@@ -64,7 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             break;
         }
 
-        // $sql = "UPDATE webassign2.users SET username = '$userName', firstName = '$firstName', lastName = '$lastName', email = '$email', phone = '$phone', password = '$password', role = '$role' WHERE id = $id";
         $result = $connection->query("UPDATE webassign2.users SET username = '$userName', firstName = '$firstName', lastName = '$lastName', email = '$email', phone = '$phone', password = '$password', role = '$role' WHERE id = '$id';");
 
         if (!$result) {
@@ -107,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         }
         ?>
         <form action="" method="POST">
-            <input type="hidden" value="<?php echo $id; ?>">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
             <div>
                 <label for="username">Username</label>
                 <input type="text" name="username" value="<?php echo $userName; ?>">
