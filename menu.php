@@ -12,9 +12,9 @@
 
 <body>
     <!-- Navigation bar-->
-    <header class="header" id="menupage">
+    <header class="header" id="menupage">    
         <div class="navbar">
-            <h2>My Pizza shop</h3>
+            <p>My Pizza shop</p>
         </div> 
         <div class="logoutdiv">                      
             <?php  if (isset($_SESSION['username'])) : ?>
@@ -23,13 +23,13 @@
                 </p>                
             <?php endif ?>            
             <?php  if ($_SESSION['role'] == 'admin') { 
-                 echo "<a class=\"adminlink\" href=\"./admin.php\"> Go to Admin Page </a>";
+                 echo "<a class=\"adminlink\" href=\"./admin/admin.php\"> Go to Admin Page </a>";               
             } ?>
-            <a class="link" href="./index.html">Log-out</a>
+            <a class="link" href="./index.html">Log-out</a>            
             
-        </div>
-    </header>
-    
+        </div>        
+    </header>    
+   
    
     <!-- Filtering and searching area -->
     <form class="select-form">
@@ -70,12 +70,14 @@
                 echo "
                 
             <div class='item'>
-            <div class='item-image'><img src='$row[image]' alt='$row[name]'></div>
+            <div class='item-image'><img class='itemimage' src='$row[image]' alt='$row[name]'></div>
+            <div class='item-text'>
             <div class='name'>$row[name]</div>
             <div class='category'>$row[category]</div>
             <div class='descrip'>$row[description]</div>
             <div class='size'>$row[size]</div>
             <div class='price'>$row[price]</div>
+            </div>
             </div>
                 ";
             };
