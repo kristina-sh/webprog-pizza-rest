@@ -6,25 +6,27 @@
 <?php
 
 $servername = "localhost";
-$username = "root";
+$user = "root";
 $databasePasswd = "";
 $database = "webassign2";
 
 //Create connection
-$connection = new mysqli($servername, $username, $databasePasswd, $database);
+$connection = new mysqli($servername, $user, $databasePasswd, $database);
 
 $firstName = "";
 $lastName = "";
 $email = "";
 $phone = "";
-$userName = "";
+$username = "";
 $role = "";
 $password = "";
+
+
 $errorMessage = "";
 $successMessage = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $userName = $_POST["username"];
+    $username = $_POST["username"];
     $firstName = $_POST["firstName"];
     $lastName = $_POST["lastName"];
     $email = $_POST["email"];
@@ -33,14 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $role = $_POST["role"];
 
     do {
-        if (empty($userName) || empty($firstName) || empty($lastName) || empty($email) || empty($password)) {
+        if (empty($username) || empty($firstName) || empty($lastName) || empty($email) || empty($password)) {
             $errorMessage = "Username, first and last name, email, and password required";
             break;
         }
 
         // add new client to database
 
-        $result = $connection -> query("INSERT INTO users (username, firstName, lastName, email, phone, role, password) VALUES ('$userName', '$firstName', '$lastName', '$email', '$phone', '$role', '$password');");
+        $result = $connection -> query("INSERT INTO users (username, firstName, lastName, email, phone, role, password) VALUES ('$username', '$firstName', '$lastName', '$email', '$phone', '$role', '$password');");
 
         if (!$result) {
             $errorMessage = "Invalid Query: " . $connection->error;
@@ -51,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $lastName = "";
         $email = "";
         $phone = "";
-        $userName = "";
+        $username = "";
         $role = "";
         $password = "";
 
@@ -83,16 +85,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         if ( !empty($errorMessage)) {
             echo "
             <div class='errorMessage' role='alert'>
-                <strong>$errorMessage</strong>
-                <button type='button' class='buttonError' data-bs-dismiss='alert'></button>
+                <button type='button' class='buttonError' data-bs-dismiss='alert'>$errorMessage</button>
             </div>
             ";
         }
         ?>
         <form action="" method="POST">
             <div>
-                <label for="userName">Username</label>
-                <input type="text" name="userName" value="<?php echo $userName; ?>">
+                <label for="username">Username</label>
+                <input type="text" name="username" value="<?php echo $username; ?>">
             </div>
             <div>
                 <label for="firstName">First Name</label>

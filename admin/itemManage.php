@@ -10,8 +10,10 @@
 </head>
 <body>
     <div>
-        <h1>Menu Item Management Page</h1>
-        <a class="newItem" href="./createItem.php" role="button">New Item</a>
+        <header>
+            <h1>Menu Item Management Page</h1>
+        </header>
+        <a class="newItem adminButtons" href="./createItem.php" role="button">New Item</a>
         <table class="dataTable">
             <tr>
                 <th>ID</th>
@@ -56,8 +58,8 @@
                     <td>$row[size]</td>
                     <td>$row[price]</td>
                     <td>
-                        <a class='editItem' href='./editItem.php?id=$row[id]'>Edit</a>
-                        <a class='deleteItem' href='./deleteItem.php?id=$row[id]'>Delete</a>
+                        <a class='editItem adminButtons' href='./editItem.php?id=$row[id]'>Edit</a>
+                        <a class='deleteItem adminButtons' href='./deleteItem.php?id=$row[id]'>Delete</a>
                     </td>
                 </tr>
                 ";
@@ -69,7 +71,7 @@
         </table>  
     </div>
     <div>
-        <a href="./../admin.php">Return</a>
+        <a href="./../admin.php"  class="returnHome adminButtons">Return</a>
     </div>
 
 </body>

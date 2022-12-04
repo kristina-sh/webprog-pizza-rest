@@ -11,16 +11,20 @@
     <title>My Pizza Shop Admin Page</title>
 </head>
 <body>
-    <h1>Welcome to My Pizza Shop Admin Page</h1>
-    <h2>What would you like to do?</h2>
-    <div>
-        <a class="adminButtons manageButtons" href="./admin/userManage.php">User Management</a>
-    </div>
-    <div>
-        <a class="adminButtons manageButtons" href="./admin/itemManage.php"> Menu Item Management</a>
-    </div>
-    <div>
-        <a class="adminButtons returnHome" href="./menu.php">Return to My Pizza Shop</a>
+    <header>
+        <h1>Welcome to My Pizza Shop Admin Page</h1>
+        <h2>What would you like to do?</h2>
+    </header>
+    <div class="flexContainerAdmin">
+        <div>
+            <a class="adminButtons manageButtons" href="./admin/userManage.php">User Management</a>
+        </div>
+        <div>
+            <a class="adminButtons manageButtons" href="./admin/itemManage.php"> Menu Item Management</a>
+        </div>
+        <div>
+            <a class="adminButtons returnHome" href="./menu.php">Return to My Pizza Shop</a>
+        </div>
     </div>
 </body>
 </html>

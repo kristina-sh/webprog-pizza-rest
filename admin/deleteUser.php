@@ -3,14 +3,14 @@
 <?php
 
 $servername = "localhost";
-$username = "root";
+$user = "root";
 $databasePasswd = "";
 $database = "webassign2";
 
 $id = $_GET["id"];
 
 //Create connection
-$connection = new mysqli($servername, $username, $databasePasswd, $database);
+$connection = new mysqli($servername, $user, $databasePasswd, $database);
 
 $result = $connection -> query("DELETE FROM users WHERE id='$id'");
 if (!$result) {
