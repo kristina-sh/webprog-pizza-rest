@@ -1,65 +1,63 @@
+<!--    Course name: Web Programming (CST_8285_312)
+        Assignment 2
+        Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad 
+-->
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Banu Mohammad">
+  <meta name="author" content="Kristina Shalaginova, Melanie Methe, Banumajan Mohammad">
   <link rel="stylesheet" href="CSS/assignment2.css">
-  <title>My Pizza Shop Login</title>
-  <script src="JS/script.js" defer>  </script>
+  <title>My Pizza Shop Register</title>
+  <script src="./JS/script.js" defer>  </script>
 </head>
-<body>
-  <div id="header"></div>
 
-  <form action="register.php"  method="post">
-   
+<body>
+  <div class="header">
+    <h2>Welcome to</h2>
+    <h1>My Pizza shop</h1>  
+  </div>
+  
+  <form action="register.php"  method="post" onsubmit="return validate();">  
   <div class="registercontainer">
 
-    <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="userid" >
+        <label for="login"><b>Username</b></label>
+        <input id="login" type="text" placeholder="Enter Username" name="userid" >
+        <label id="loginErr"></label>
         <br><br>
-        
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" >
-        <br><br>
-        
+
+        <label for="pass"><b>Password</b></label>
+        <input id="pass" type="password" placeholder="Enter Password" name="password" >
+        <label id="pass1Err"></label>
+        <br><br>        
         
         <label for="firstname"><b>Firstname</b></label>
-        <input type="text" placeholder="Enter Firstname" name="fname" >
+        <input id="firstname" type="text" placeholder="Enter Firstname" name="fname" >
+        <label id="firstErr"></label>
         <br><br>
         
         <label for="lastname"><b>Lastname</b></label>
-        <input type="text" placeholder="Enter Lastname" name="lname" >
+        <input id="lastname"type="text" placeholder="Enter Lastname" name="lname" >
+        <label id="lastErr"></label>
+        <br><br>        
+        
+        <label for="email"><b>Email</b></label>        
+        <input id="email" type="text" placeholder="Enter email" name="email" >
+        <label id="emailErr"></label>
         <br><br>
         
-        <!-- <label for="Age"><b>Age</b></label>
-        <input type="text" placeholder="Enter Age" name="age" required>
-        <br><br>
-         -->
-        
-        <label for="email"><b>Email</b></label>
-        <br><br>
-        <input type="text" placeholder="Enter email" name="email" >
-        <br><br>
-        
-        <label for="phone"><b>Phone</b></label>
-        <input type="text" placeholder="Enter phone number" name="phone" >
-        <br><br>
-        
-        <button type="submit">Register</button>
-      
+        <label for="phone"><b>Phone (xxx-xxx-xxxx)</b></label>
+        <input id="phone" type="text" placeholder="Enter phone number" name="phone" >
+        <label id="phoneErr"></label>
+        <br><br> 
 
-  </div>
-  
+        <button type="submit">Register</button>  
+  </div>  
   </form>
-  <!-- <div class="footer">
+  <div class="footer">
      <p>© 2022 My Pizza Shop (mypizza.com). All Rights Reserved.</p> 
-  </div> -->
-
-  <?php include "footer.php";?>
-  
-
-  
+  </div>  
 </body>
 </html>

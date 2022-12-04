@@ -12,10 +12,10 @@ $id = $_GET["id"];
 //Create connection
 $connection = new mysqli($servername, $username, $databasePasswd, $database);
 
-$result = $connection -> query("DELETE FROM users WHERE id='$id'");
+$result = $connection -> query("DELETE FROM items WHERE id='$id'");
 if (!$result) {
     $errorMessage = "Invalid Query: " . $connection -> error;
 }
 
-header("location: ./userManage.php");
+header("location: ./itemManage.php");
 ?>

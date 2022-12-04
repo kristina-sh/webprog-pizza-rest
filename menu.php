@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +14,23 @@
     <!-- Navigation bar-->
     <header class="header" id="menupage">
         <div class="navbar">
-            <h3>My Pizza shop</h3>
-            <h6><a class="link" href="./index.html">Log-in</a></h6>
+            <h2>My Pizza shop</h3>
+        </div> 
+        <div class="logoutdiv">                      
+            <?php  if (isset($_SESSION['username'])) : ?>
+                <p class="loginuser">Welcome                    
+                    <?php echo $_SESSION['username']; ?>                    
+                </p>                
+            <?php endif ?>            
+            <?php  if ($_SESSION['role'] == 'admin') { 
+                 echo "<a class=\"adminlink\" href=\"./admin.php\"> Go to Admin Page </a>";
+            } ?>
+            <a class="link" href="./index.html">Log-out</a>
+            
         </div>
     </header>
-
+    
+   
     <!-- Filtering and searching area -->
     <form class="select-form">
         <div class="head-select"> Filter menu items:</div>
@@ -27,8 +40,8 @@
             <option value="pasta" class="option">Pasta</option>
         </select>
         <input type="text" id="searchbar" onkeyup="search_item()" name="search" placeholder="Search...">
-
     </form>
+    
     <!--Conttent with menu items -->
     <div class="menu">
         <?php
