@@ -24,7 +24,7 @@ $errorMessage = "";
 $successMessage = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $userName = $_POST["userName"];
+    $userName = $_POST["username"];
     $firstName = $_POST["firstName"];
     $lastName = $_POST["lastName"];
     $email = $_POST["email"];

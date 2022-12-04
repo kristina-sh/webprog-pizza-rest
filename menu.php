@@ -23,7 +23,7 @@
                 </p>                
             <?php endif ?>            
             <?php  if ($_SESSION['role'] == 'admin') { 
-                 echo "<a class=\"adminlink\" href=\"./admin/admin.php\"> Go to Admin Page </a>";
+                 echo "<a class=\"adminlink\" href=\"./admin/admin.php\"> Go to Admin Page </a>";               
             } ?>
             <a class="link" href="./index.html">Log-out</a>            
             
