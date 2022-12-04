@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Melanie Methe">
-    <link rel="stylesheet" href="./CSS/assignment2.css">
+    <link rel="stylesheet" href="./../CSS/admin.css">
     <title>Menu Item Management Page</title>
 </head>
 <body>
