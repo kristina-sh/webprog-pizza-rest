@@ -1,4 +1,7 @@
-<!-- EditUser page now fully functional! -->
+<!-- Course name: Web Programming (CST_8285_312)
+Assignment 2
+Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad -->
+
 <?php
 
 $servername = "localhost";
@@ -150,8 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             ?>
             <div>
                 <button type="submit">Submit</button>
-                <button type="reset">Clear</button>
-                <a class="cancel" href="./userManage.php" role="button">Cancel</a>
+                <button onclick="link" href="./userManage.php">Return Without Changes</button>
             </div>
         </form>
     </div>

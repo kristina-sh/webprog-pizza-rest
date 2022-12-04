@@ -1,3 +1,7 @@
+<!-- Course name: Web Programming (CST_8285_312)
+Assignment 2
+Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +75,7 @@
         </table>  
     </div>
     <div>
-        <a href="./../admin.php"  class="returnHome adminButtons">Return</a>
+        <a href="./../admin.html"  class="returnHome adminButtons">Return</a>
     </div>
 
 </body>

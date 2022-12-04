@@ -1,3 +1,8 @@
+<!-- Course name: Web Programming (CST_8285_312)
+Assignment 2
+Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad -->
+
+
 <?php
 
 $servername = "localhost";
@@ -8,6 +13,7 @@ $database = "webassign2";
 //Create connection
 $connection = new mysqli($servername, $username, $databasePasswd, $database);
 
+//Initialize empty variables
 $image = "";
 $name = "";
 $category = "";
@@ -31,8 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             break;
         }
 
-        // add new client to database
-
+        // add new item to database
         $result = $connection -> query("INSERT INTO items (image, name, category, description, size, price) VALUES ('$image', '$name', '$category', '$description', '$size', '$price');");
 
         if (!$result) {
@@ -117,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             <div>
                 <button type="submit">Submit</button>
                 <button type="reset">Clear</button>
-                <a class="cancel" href="./itemManage.php" role="button">Cancel</a>
+                <a class="cancel" href="./userManage.php" role="button">Cancel</a>
             </div>
         </form>
     </div>

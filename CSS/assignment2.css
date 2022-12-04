@@ -39,7 +39,7 @@ body {
   margin-top: 30px; 
 }
 /* Format the button (Banumajan Mohammad)  */
-button {
+button, .cancel {
   background-color: #4CAF50;
 
   background: linear-gradient(to right, #33ccff 0%, #00cc00 100%);
@@ -56,8 +56,15 @@ button {
 }
 
 /* Hover the button (Banumajan Mohammad)  */
-button:hover {
+button:hover, .cancel:hover {
   opacity: 0.8;
+}
+
+.cancel {
+  display: block;
+  max-width: 98%;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* Format the input text fields (Banumajan Mohammad)  */
