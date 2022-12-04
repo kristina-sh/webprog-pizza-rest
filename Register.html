@@ -8,16 +8,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Kristina Shalaginova, Melanie Methe, Banumajan Mohammad">
+  <meta name="author" content="Banumajan Mohammad">
   <link rel="stylesheet" href="CSS/assignment2.css">
   <title>My Pizza Shop Register</title>
   <script src="./JS/script.js" defer>  </script>
 </head>
 
 <body>
+  <!--header-->
   <div class="header">
     <h2>Welcome to</h2>
-    <h1>My Pizza shop</h1>  
+    <h1>My Pizza shop</h1> 
+    <a class="link" href="./index.html">Return to Login</a>  
   </div>
   
   <form action="register.php"  method="post" onsubmit="return validate();">  
@@ -53,9 +55,11 @@
         <label id="phoneErr"></label>
         <br><br> 
 
-        <button type="submit">Register</button>  
+        <button type="submit">Register</button> 
+        <button type="reset">Clear form</button>
   </div>  
   </form>
+  <!--Footer-->
   <div class="footer">
      <p>© 2022 My Pizza Shop (mypizza.com). All Rights Reserved.</p> 
   </div>  

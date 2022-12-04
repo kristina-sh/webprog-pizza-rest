@@ -1,10 +1,14 @@
+<!--    Course name: Web Programming (CST_8285_312)
+        Assignment 2
+        Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad 
+-->
 <?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Kristina Shalaginova">
+    <meta name="author" content="Kristina Shalaginova,Banumajan Mohammad">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/assignment2.css">
     <title>Menu</title>
@@ -14,7 +18,7 @@
     <!-- Navigation bar-->
     <header class="header" id="menupage">    
         <div class="navbar">
-            <p>My Pizza shop</p>
+            <p>My Pizza Shop</p>
         </div> 
         <div class="logoutdiv">                      
             <?php  if (isset($_SESSION['username'])) : ?>
@@ -23,13 +27,12 @@
                 </p>                
             <?php endif ?>            
             <?php  if ($_SESSION['role'] == 'admin') { 
-                 echo "<a class=\"adminlink\" href=\"./admin.html\"> Go to Admin Page </a>";               
+                 echo "<a class=\"adminlink\" href=\"./admin.php\"> Go to Admin Page </a>";               
             } ?>
-            <a class="link" href="./index.html">Log-out</a>            
-            
+
+            <a class="link" href="./index.html">Log-out</a> 
         </div>        
     </header>    
-   
    
     <!-- Filtering and searching area -->
     <form class="select-form">
@@ -42,7 +45,7 @@
         <input type="text" id="searchbar" onkeyup="search_item()" name="search" placeholder="Search...">
     </form>
     
-    <!--Conttent with menu items -->
+    <!--Content with menu items -->
     <div class="menu">
         <?php
             $servername = "localhost";

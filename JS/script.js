@@ -1,5 +1,13 @@
+/*Course name: Web Programming (CST_8285_312)
+  Assignment 2
+  Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad 
+ */
 
+  /*Author:BanuMajan Mohammad */
+// Regular expression for email validation
 let Regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+
 let email       = document.getElementById("email");
 let login       = document.getElementById("login");
 let password   = document.getElementById("pass");
@@ -12,6 +20,7 @@ var lowerCaseLetters = /[a-z]/g;
 var upperCaseLetters = /[A-Z]/g;
 var phoneno =/^\d{3}-\d{3}-\d{4}$/;
 
+//validate the user data on registration form
 function validate(){          
     validationStatus =true;
     console.log(email.value==''? "Email blank":email.value);
@@ -105,4 +114,42 @@ function validate(){
    
     console.log("validationStatus: "+ validationStatus);
     return validationStatus ; 
+};
+
+//validate login details before sending to the server
+function validateLogin() {
+    validateloginStatus =true;   
+    let username       = document.getElementById("uname");
+    let password       = document.getElementById("psw");
+
+    // Login name validation
+    if ((username.value.length== 0)){                
+        username.style.borderColor="red";
+        username.style.borderWidth = "2px 2px 2px 2px";        
+        
+        loginErr.style.color ="red"  ;   
+        loginErr.textContent= "X User name is required! ";
+
+        validateloginStatus =false;       
+    }
+    else {
+        username.style.borderColor='';
+        loginErr.textContent = '';         
+    } 
+
+    //password validation
+    if (password.value.length ==0){                
+        password.style.borderColor="red";
+        password.style.borderWidth = "2px 2px 2px 2px";        
+        
+        pass1Err.style.color ="red"  ;   
+        pass1Err.textContent= "X Password is required! ";  
+        validateloginStatus =false;
+    }
+    else {
+        password.style.borderColor='';
+        pass1Err.textContent = '';
+    } 
+    return validateloginStatus ; 
+
 }

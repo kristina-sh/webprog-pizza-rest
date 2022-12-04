@@ -2,9 +2,12 @@
         Assignment 2
         Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad 
 -->
+<!-- Author:BanuMajan Mohammad -->
 <?php
+// start the session
 session_start();
 
+// super global variables
 $user_id     =$_POST['userid'];
 $pwd        =$_POST['password'];
 
@@ -17,13 +20,18 @@ if ($conn->connect_error) {
 
 else {
     $sql ="select * from users where username ='$user_id' and password='$pwd'" ;
+
+    //execute the sql
     $result =mysqli_query($conn, $sql);
     
+    //check the number of rows returned
     $count =mysqli_num_rows($result);
     
+    //if the number of rows returned is then its a successfull login
     if ($count==1) {
         $row = mysqli_fetch_assoc($result);
         
+        //set the session user name and role so we can use it in future pages
          $_SESSION['username'] = $row['username'];
          $_SESSION['role'] = $row['role'];
        
@@ -31,11 +39,13 @@ else {
     }
 
     else {
+        // error message to the user for incorrect login
         echo '<script>
         window.location.href ="index.html";
         alert ("Login Failed. Invalid username or password!!!")
         </script>';
     }    
+    //close the sql connection
     $conn->close();
 }
 ?>
