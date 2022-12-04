@@ -13,7 +13,9 @@
 </head>
 <body>
     <div>
-        <h1>User Management Page</h1>
+        <header>
+            <h1>User Management Page</h1>
+        </header>
         <a class="newUser" href="./createUser.php" role="button">New User</a>
         <table class="dataTable">
             <tr>

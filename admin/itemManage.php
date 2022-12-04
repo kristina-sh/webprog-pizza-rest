@@ -10,7 +10,9 @@
 </head>
 <body>
     <div>
-        <h1>Menu Item Management Page</h1>
+        <header>
+            <h1>Menu Item Management Page</h1>
+        </header>
         <a class="newItem" href="./createItem.php" role="button">New Item</a>
         <table class="dataTable">
             <tr>
