@@ -16,7 +16,9 @@
         <header>
             <h1>User Management Page</h1>
         </header>
-        <a class="newUser" href="./createUser.php" role="button">New User</a>
+        <div>
+            <a href="./createUser.php" type="button" onclick="link" class="adminButtons newUser">New User</a>
+        </div>
         <table class="dataTable">
             <tr>
                 <th>ID</th>
@@ -63,8 +65,8 @@
                     <td>$row[role]</td>
                     <td>$row[username]</td>
                     <td>
-                        <a class='editUser' href='./editUser.php?id=$row[id]'>Edit</a>
-                        <a class='deleteUser' href='./deleteUser.php?id=$row[id]'>Delete</a>
+                        <a class='editItem adminButtons' href='./editUser.php?id=$row[id]'>Edit</a>
+                        <a class='deleteItem adminButtons' href='./deleteUser.php?id=$row[id]'>Delete</a>
                     </td>
                 </tr>
                 ";
@@ -76,7 +78,7 @@
         </table>  
     </div>
     <div>
-        <a href="./../admin.php">Return</a>
+        <a href="./../admin.php" class="returnHome adminButtons">Return</a>
     </div>
 
 </body>

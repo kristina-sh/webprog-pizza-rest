@@ -1,29 +1,36 @@
+/*Course name: Web Programming (CST_8285_312)
+Assignment 2
+Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad */
 
+/* Font family  (Banumajan Mohammad) */
 * {
     font-family: sans-serif, serif, Times,"Times New Roman" ;
     padding: 0px;
     margin: 0px;
   }
 
+/* Header styling (Melanie Methe) */
 header {
-    background-color: rgb(173, 173, 173);
-    padding-bottom: 10px;
+  background-color: rgb(173, 173, 173);
+  padding-bottom: 10px;
 }
 
-  h1 {
-    text-align: center;
-    margin-bottom: 10px;
-    padding-top: 10px;
-  }
+/* Title and subtitle styling (Melanie Methe) */
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
 
-  h2 {
-    text-align: center;
-  }
+h2 {
+  text-align: center;
+}
 
+/* Used flex on the admin.php page to display buttons (Melanie Methe) */
 .flexContainerAdmin {
-    display: flex;
-    justify-content: center;
-    margin: 50px 20px 30px 20px;
+  display: flex;
+  justify-content: center;
+  margin: 50px 20px 30px 20px;
 }
 
   .adminButtons {
@@ -48,9 +55,46 @@ header {
   .returnHome {
     background-color: rgb(34, 143, 34);
     padding: 10px;
+    margin: 10px 0px 10px 10px;
     border-radius: 8px;
     border: 1px solid black;
   }
+
+.newUser, .newItem {
+  background-color: rgb(28, 255, 66);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0px 10px 10px;
+  border: 1px solid black;
+}
+
+.dataTable {
+  margin-left: 20px;
+}
+
+tr > td {
+  padding: 10px 10px 10px 0px;
+}
+
+.editItem, .deleteItem {
+  padding: 8px;
+  text-align: center;
+  margin: 3px;
+}
+
+.editItem {
+  background-color:rgb(91, 156, 255);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.deleteItem {
+  background-color:rgb(168, 0, 0);
+  color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
 
   @media (max-width: 900px) {
     .flexContainerAdmin {
