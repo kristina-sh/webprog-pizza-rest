@@ -3,6 +3,8 @@
         Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad 
 -->
 <?php
+session_start();
+
 $user_id     =$_POST['userid'];
 $pwd        =$_POST['password'];
 
@@ -20,21 +22,12 @@ else {
     $count =mysqli_num_rows($result);
     
     if ($count==1) {
+        $row = mysqli_fetch_assoc($result);
         
-        header("Location:menu.php");
-
-        //$row = mysqli_fetch_assoc($result);
-       // echo $row['role'];
-        // if($row['role']=='user'){
-           // header("Location:menu.html");
-          
-       // }
+         $_SESSION['username'] = $row['username'];
+         $_SESSION['role'] = $row['role'];
        
-        // else{
-        //   //  header("Location:itemusermgt.html");
-        //   header("Location:userManage.php");
-        // }
-        //header("Location:userManage.php");
+        header("Location:menu.php");        
     }
 
     else {

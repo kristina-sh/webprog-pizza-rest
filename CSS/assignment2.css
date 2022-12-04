@@ -2,13 +2,16 @@
 Assignment 2
 Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad */
 
+
+/* Font family  (Banumajan Mohammad) */
 * {
-  font-family: sans-serif;
+  font-family: sans-serif, serif, Times,"Times New Roman" ;
 }
 
+/* Format the body (Banumajan Mohammad) */
 body {
-  background: linear-gradient(to left, #2f54c2 27%, #ff99cc 100%);
-  background: blueviolet;
+  
+  background: blueviolet;  
   position: relative;
   /* for the footer to move with the page size */
   min-height: 100%;
@@ -19,17 +22,18 @@ body {
   /* To fit the body in the page */
 }
 
+/* Login and register window with shadow (Banumajan Mohammad) */
 .logincontainer,
 .registercontainer {
   background-color: white;
   padding: 50px;
   width: 500px;
   margin: auto;
-  border-radius: 25px;
-  /* box-shadow: 2px 2px 8px #c3182c; */
+  border-radius: 25px; 
   box-shadow: 10px 10px 5px rgb(82, 11, 77);
 }
 
+/* Format the button (Banumajan Mohammad)  */
 button {
   background-color: #4CAF50;
   color: white;
@@ -40,16 +44,12 @@ button {
   width: 100%;
 }
 
+/* Hover the button (Banumajan Mohammad)  */
 button:hover {
   opacity: 0.8;
 }
 
-/* .logincontainer[type=label]{
-    width: 30%;
-    float: left;
-    padding-top: 15px;
-} */
-
+/* Format the input text fields (Banumajan Mohammad)  */
 input[type=text],
 input[type=password] {
   width: 100%;
@@ -60,6 +60,7 @@ input[type=password] {
   box-sizing: border-box;
 }
 
+/* Format the header (Banumajan Mohammad)  */
 .header {
   margin-bottom:50px;
   text-align: center;
@@ -71,7 +72,7 @@ input[type=password] {
   margin: -10px -10px 10px -10px; 
 }
 
-
+/* Format the footer (Banumajan Mohammad)  */
 .footer {
   position: fixed;
   left: 0;
@@ -84,6 +85,43 @@ input[type=password] {
   padding: 1px;
   overflow: hidden;
 }
+
+/* Format logout division on menu.php page (Banumajan Mohammad)  */
+.logoutdiv {
+  text-align:right;
+  color: black;
+  margin-top: -100px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Format adminlink on menu.php page (Banumajan Mohammad)  */
+.adminlink{  
+  margin-top: 100px;  
+  margin-right: 50px;
+}
+
+/* Format loginuser name on menu.php page (Banumajan Mohammad)  */
+.loginuser {
+  text-align:right;
+}
+
+/* Hover option for admin link and logout option on menu.php page (Banumajan Mohammad)  */
+a.link:hover,a.adminlink:hover {
+  background-color: rgb(234, 226, 226);
+  color: black;
+}
+
+ /* Format the admin link logout option (Banumajan Mohammad) */
+ a.link,a.adminlink {    
+  background: rgb(11, 94, 17);
+  border-radius: 10px;
+  color: yellow;
+  padding: 10px;
+}
+
+
+
 
 /* Format items boxes on menu page (Kristina Shalaginova)*/
 .item {
@@ -141,16 +179,6 @@ input[type=password] {
   font-size: 30px;
 }
 
-.link {
-  text-decoration: none;
-  color: black;
-  margin-left: 400px;
-}
-
-h6 a:hover {
-  background-color: rgb(234, 226, 226);
-  color: black;
-}
 
 .navbar {
   display: flex;
