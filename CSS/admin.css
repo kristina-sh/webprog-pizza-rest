@@ -1,0 +1,19 @@
+
+* {
+    font-family: sans-serif, serif, Times,"Times New Roman" ;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  body {
+    
+    background-color: white;  
+    position: relative;
+    /* for the footer to move with the page size */
+    min-height: 100%;
+    /* for the footer to be at the bottom */
+    padding-bottom: 3rem;
+    /* for padding at the bottom in the courses page */
+    margin: 10px;
+    /* To fit the body in the page */
+  }
