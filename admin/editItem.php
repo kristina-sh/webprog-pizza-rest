@@ -1,4 +1,4 @@
-<!-- EditUser page now fully functional! -->
+<!-- EditItem page now fully functional! -->
 <?php
 
 $servername = "localhost";
