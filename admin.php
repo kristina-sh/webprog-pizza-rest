@@ -1,3 +1,7 @@
+<!--  Course name: Web Programming (CST_8285_312)
+      Assignment 2
+      Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad
+ -->
 <!-- Note about editUser.php bug found: admin can make duplicate user names -->
 
 <!DOCTYPE html>

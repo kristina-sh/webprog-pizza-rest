@@ -1,24 +1,26 @@
-/* Course name: Web Programming (CST_8285_312)
- Assignment 2
-Student: Banumajan Mohammad */
+/*  Course name: Web Programming (CST_8285_312)
+      Assignment 2
+      Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad
+ */
 
-// Regular expression for email validation
+//   Author: Banumajan Mohammad
+// Regular expression for email validation 
 let Regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
 
 let email       = document.getElementById("email");
 let login       = document.getElementById("login");
-let password   = document.getElementById("pass");
+let password    = document.getElementById("pass");
 let firstname   = document.getElementById("firstname");
-let lastname   = document.getElementById("lastname");
-let phone   = document.getElementById("phone");
-let role   = document.getElementById("role");
+let lastname    = document.getElementById("lastname");
+let phone       = document.getElementById("phone");
+let role        = document.getElementById("role");
 
 var lowerCaseLetters = /[a-z]/g;
 var upperCaseLetters = /[A-Z]/g;
 var phoneno =/^\d{3}-\d{3}-\d{4}$/;
 
-//validate the user data on registration form
+//validate the user data on registration form 
 function validate(){          
     validationStatus =true;
     console.log(email.value==''? "Email blank":email.value);
@@ -114,7 +116,7 @@ function validate(){
     return validationStatus ; 
 };
 
-//validate login details before sending to the server
+//validate login details before sending to the server 
 function validateLogin() {
     validateloginStatus =true;   
     let username       = document.getElementById("uname");

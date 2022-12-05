@@ -1,7 +1,7 @@
-<!--    Course name: Web Programming (CST_8285_312)
-        Assignment 2
-        Students: Kristina Shalaginova, Banumajan Mohammad
--->
+<!--  Course name: Web Programming (CST_8285_312)
+      Assignment 2
+      Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad
+ -->
 <?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">

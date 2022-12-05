@@ -1,7 +1,9 @@
-<!--    Course name: Web Programming (CST_8285_312)
-        Assignment 2
-        Students: Banumajan Mohammad 
--->
+<!--  Course name: Web Programming (CST_8285_312)
+      Assignment 2
+      Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad
+ -->
+
+  <!-- Author: Banumajan Mohammad -->
 <?php
 // super global variables
 $userid     =$_POST['userid'];

@@ -1,8 +1,10 @@
-<!--    Course name: Web Programming (CST_8285_312)
-        Assignment 2
-        Student: Banumajan Mohammad 
--->
-<?php
+<!--  Course name: Web Programming (CST_8285_312)
+      Assignment 2
+      Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad
+ -->
+
+ <!-- Author: Banumajan Mohammad -->
+ <?php
 // start the session
 session_start();
 
