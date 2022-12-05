@@ -38,13 +38,11 @@ body {
 .registercontainer {
   margin-top: 30px; 
 }
+
 /* Format the button (Banumajan Mohammad)  */
 button, .cancel {
   background-color: #4CAF50;
 
-  background: linear-gradient(to right, #33ccff 0%, #00cc00 100%);
-  background: linear-gradient(to right, #9900cc 0%, #66ccff 100%);
-  background: linear-gradient(to right, #00ccff 0%, #0066cc 100%);
   background: linear-gradient(to right, #0000cc 0%, #000066 100%);
   color: white;
   padding: 14px 20px;
@@ -122,6 +120,7 @@ input[type=password] {
   margin-right: 50px;
 }
 
+
 /* Format loginuser name on menu.php page (Banumajan Mohammad)  */
 .loginuser {
   text-align:right;
@@ -143,13 +142,9 @@ a.link:hover,a.adminlink:hover {
   font-size: 18px;
 }
  /* Format the admin link logout option (Banumajan Mohammad) */
- a.link,a.adminlink {    
-  background: rgb(11, 94, 17);
-  background: linear-gradient(to right, #ff66ff 0%, #cc0099 100%);
-  background: linear-gradient(to right, #cc66ff 0%, #3366ff 100%);
-  background: blueviolet;    
-  border-radius: 10px;
-  color: yellow;
+ a.link,a.adminlink {      
+  background: rgb(140, 64, 210);    
+  border-radius: 10px;  
   color: white;
   font-weight:bold;
   padding: 10px;
@@ -350,9 +345,8 @@ div.item-image, div.item-text {
   /* Banu changes for responsive screen ends*/
 }
 
-/* @media (max-width: 600px) { */
-  /* @media only screen and (max-width: 600px) { */
-  @media only screen and (max-width: 1000px) and (min-width: 400px){
+
+@media only screen and (max-width: 1000px) and (min-width: 400px){
   .menu {
     grid-template-columns: repeat(1, 95vw);
   }

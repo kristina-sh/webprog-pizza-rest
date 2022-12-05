@@ -1,39 +1,41 @@
-<!--    Course name: Web Programming (CST_8285_312)
-        Assignment 2
-        Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad 
--->
+<!--  Course name: Web Programming (CST_8285_312)
+      Assignment 2
+      Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Kristina Shalaginova, Melanie Methe, Banumajan Mohammad">
+    <meta name="author" content="Banumajan Mohammad">
     <link rel="stylesheet" href="CSS/assignment2.css">
     <title>My Pizza Shop Login</title>
     <script src="JS/script.js" defer></script>
 </head>
 <body>  
+    <!--Header-->
     <div class="header">
         <h2>Welcome to</h2>
         <h1>My Pizza Shop</h1>      
     </div>  
 
-    <form action="login.php"  method="post">
+    <form action="login.php"  method="post" onsubmit="return validateLogin();">
         <div class="logincontainer">    
 
             <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="userid" >
-
+            <input id="uname" type="text" placeholder="Enter Username" name="userid" >
+            <label id="loginErr"></label>
+            <br><br>
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" >
-                
+            <input id ="psw" type="password" placeholder="Enter Password" name="password" >
+            <label id="pass1Err"></label>   
             <button type="submit">Login</button>
             
             <a href="Register.html"> <button type="button"  > Register</button></a>   
         </div>    
     </form>   
-
+    <!--Footer-->
     <div class="footer">
         <p>© 2022 My Pizza Shop (mypizza.com). All Rights Reserved.</p>
     </div>   

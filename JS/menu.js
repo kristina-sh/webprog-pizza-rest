@@ -1,9 +1,11 @@
-//Course name: Web Programming (CST_8285_312)
-//Assignment 2
-//Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad
+/*  Course name: Web Programming (CST_8285_312)
+      Assignment 2
+      Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad
+ */
+
+//   Author: Kristina Shalaginova
 
 //Creating a search function on the menu page (Kristina Shalaginova)
-
 
 function search_item() {
 
