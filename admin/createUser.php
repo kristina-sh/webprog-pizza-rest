@@ -1,7 +1,6 @@
-<!--FUNCTIONAL IN TERMS OF CREATING NEW USERS. HOWEVER TO DO LIST:
-1. Need to fix "clear" button. Doesn't work anymore.
-2. Need to fix error messages. Don't look good as buttons.
--->
+<!-- Course name: Web Programming (CST_8285_312)
+Assignment 2
+Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad -->
 
 <?php
 
