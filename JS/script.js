@@ -1,10 +1,10 @@
-/*Course name: Web Programming (CST_8285_312)
-  Assignment 2
-  Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad 
+/*  Course name: Web Programming (CST_8285_312)
+      Assignment 2
+      Students: Kristina Shalaginova, Melanie Methe, Banumajan Mohammad
  */
 
-  /*Author:BanuMajan Mohammad */
-// Regular expression for email validation
+//   Author: Banumajan Mohammad
+// Regular expression for email validation 
 let Regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
 
